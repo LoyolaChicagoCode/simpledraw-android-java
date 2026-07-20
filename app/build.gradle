@@ -1,20 +1,26 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 22
+    compileSdkVersion 36
+    buildToolsVersion "36.0.0"
+    namespace 'edu.luc.etl.cs313.android.simpledraw'
 
     defaultConfig {
         applicationId "edu.luc.etl.cs313.android.simpledraw"
-        minSdkVersion 15
-        targetSdkVersion 22
+        minSdkVersion 23
+        targetSdkVersion 36
         versionCode 1
         versionName "1.0"
     }
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_25
+        targetCompatibility JavaVersion.VERSION_25
     }
     testOptions {
         unitTests.returnDefaultValues = true

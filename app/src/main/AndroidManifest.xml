@@ -9,7 +9,8 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="edu.luc.etl.cs313.android.simpledraw.SimpleDrawActivity"
-            android:label="@string/title_activity_main" >
+            android:label="@string/title_activity_main"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
